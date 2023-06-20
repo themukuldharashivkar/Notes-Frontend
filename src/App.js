@@ -10,6 +10,7 @@ import Todo from "./components/Todos/Todo";
 import Contact from "./components/Contact/Contact";
 import Register from "./components/Register/Register";
 import PageNotFoundError from "./components/Error/PageNotFoundError";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<PageNotFoundError />} />
       </Routes>
+      <Footer />
       {/* <div className="bg-indigo-600 w-full h-screen"></div> */}
     </div>
   );

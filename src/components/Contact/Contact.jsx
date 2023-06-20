@@ -7,7 +7,7 @@ export default function Contact() {
             <img className='w-full h-full object-cover' src={loginImg} alt="" />
         </div> */}
 
-        <div className='bg-gray-800 flex flex-col justify-center m-5'>
+        <div className='bg-gray-800 flex flex-col justify-center m-5 mt-28'>
             <form className='max-w-[400px] w-full mx-auto rounded bg-gray-900 p-8 px-8 m-5'>
                 <h2 className='text-xl md:text-2xl lg:text-4xl dark:text-white font-bold text-center'>CONTACT US</h2>
                 <div className='flex flex-col text-gray-400 py-2'>
