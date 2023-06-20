@@ -51,7 +51,7 @@ const Notes = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-10">
         {DUMMY_NOTES.map((note) => (
-          <div className="cursor-pointer">
+          <div className="">
             <div
               className="flex flex-col border border-transparent rounded-lg bg-gray-900 shadow-lg dark:shadow-gray-900"
               key={note.id}

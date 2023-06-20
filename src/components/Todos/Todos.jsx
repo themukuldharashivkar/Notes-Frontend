@@ -19,7 +19,7 @@ const Todos = () => {
       </div>
       <div className="grid grid-cols-1 gap-10 p-10">
         {DUMMY_TODOS.map((note) => (
-          <div className="cursor-pointer">
+          <div className="">
             <div
               className="flex flex-row border border-transparent rounded-lg bg-gray-900 shadow-lg dark:shadow-gray-900 justify-evenly p-10"
               key={note.id}
