@@ -19,6 +19,7 @@ const Nav = () => {
   // }
 
   const registerNavigationHandler = () => {
+    setOpen(!open);
     navigate("/signup");
   };
 

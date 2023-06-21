@@ -1,4 +1,8 @@
 import React from "react";
+import { FaEye } from "react-icons/fa";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { BsCalendar2DateFill, BsFillPencilFill } from "react-icons/bs";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 const DUMMY_NOTES = [
   {
@@ -39,13 +43,14 @@ const DUMMY_NOTES = [
 ];
 
 const Notes = () => {
+  
   return (
-    <div className="min-h-screen bg-gray-800 text-4xl flex flex-col justify-center text-center text-white">
+    <div className="min-h-screen bg-gray-800 text-4xl flex flex-col justify-start text-center text-white">
       <div className="mt-28 md:mt-32 text-left flex flex-row justify-between ml-12 mr-12 text-xl">
-      <button className="px-4 py-2 bg-indigo-600 hover:bg-indigo-400 rounded">
+        <button className="text-sm md:text-lg px-4 py-2 bg-indigo-600 hover:bg-indigo-400 rounded">
           Add +
         </button>
-        <button className="px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded">
+        <button className="text-sm md:text-lg px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded">
           Sort
         </button>
       </div>
@@ -53,10 +58,10 @@ const Notes = () => {
         {DUMMY_NOTES.map((note) => (
           <div className="">
             <div
-              className="flex flex-col border border-transparent rounded-lg bg-gray-900 shadow-lg dark:shadow-gray-900"
+              className="flex flex-col border border-transparent rounded-lg bg-gray-900"
               key={note.id}
             >
-              <h1 className="py-5 text-center text-lg md:text-2xl font-semibold px-2 text-violet-500">
+              <h1 className="py-5 text-left px-7 text-lg md:text-2xl font-semibold text-violet-500">
                 {note.title}
               </h1>
 
@@ -66,18 +71,31 @@ const Notes = () => {
                 {note.content.slice(0, 100) + " ..."}
               </p>
 
-              <div className="flex flex-row justify-around pb-5 m-5">
-                <p className="text-sm py-2 px-2 font-semibold text-amber-500">
+              {/* Date */}
+              <div className="flex flex-row ml-5 px-2 gap-2 justify-start">
+                <BsCalendar2DateFill className="text-sm text-left text-amber-500" />
+                <p className="text-sm text-left font-semibold text-amber-500">
                   {note.date}
                 </p>
-                <button className="text-sm bg-green-600 font-semibold py-2 px-4 hover:bg-green-500 rounded">
-                  View
+              </div>
+
+              <hr className="border-indigo-600/50 mt-4" />
+
+              <div className="flex flex-row justify-end gap-3 pb-2 m-5">
+                <button className="text-sm bg-yellow-600 font-semibold py-2 px-3 hover:bg-yellow-500 rounded">
+                  {/* View */}
+                  <BsFillPencilFill />
+                </button>
+                <button className="text-sm bg-green-600 font-semibold py-2 px-3 hover:bg-green-500 rounded">
+                  {/* View */}
+                  <FaEye />
                 </button>
                 {/* <button className="text-sm bg-green-600 font-semibold py-2 px-4 hover:bg-green-500 rounded">
                   Edit
                 </button> */}
-                <button className="text-sm bg-red-600 font-semibold py-2 px-4 hover:bg-red-500 rounded">
-                  Delete
+                <button className="text-sm bg-red-600 font-semibold py-2 px-3 hover:bg-red-500 rounded">
+                  {/* Delete */}
+                  <RiDeleteBin5Fill />
                 </button>
               </div>
             </div>
