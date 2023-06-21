@@ -2,7 +2,6 @@ import React from "react";
 import { FaEye } from "react-icons/fa";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { BsCalendar2DateFill, BsFillPencilFill } from "react-icons/bs";
-import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 const DUMMY_NOTES = [
   {
@@ -47,10 +46,10 @@ const Notes = () => {
   return (
     <div className="min-h-screen bg-gray-800 text-4xl flex flex-col justify-start text-center text-white">
       <div className="mt-28 md:mt-32 text-left flex flex-row justify-between ml-12 mr-12 text-xl">
-        <button className="text-sm md:text-lg px-4 py-2 bg-indigo-600 hover:bg-indigo-400 rounded">
-          Add +
+        <button className="text-xs md:text-base px-4 py-2 bg-indigo-600 hover:bg-indigo-400 rounded">
+          New
         </button>
-        <button className="text-sm md:text-lg px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded">
+        <button className="text-xs md:text-base px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded">
           Sort
         </button>
       </div>

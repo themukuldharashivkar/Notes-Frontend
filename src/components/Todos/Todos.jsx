@@ -38,10 +38,10 @@ const Todos = () => {
   return (
     <div className="min-h-screen bg-gray-800 text-4xl flex flex-col justify-start text-center text-white">
       <div className="mt-28 md:mt-32 text-left flex flex-row justify-between ml-12 mr-12 text-xl">
-        <button className="text-sm md:text-lg px-4 py-2 bg-indigo-600 hover:bg-indigo-400 rounded">
-          Add +
+        <button className="text-xs md:text-base px-4 py-2 bg-indigo-600 hover:bg-indigo-400 rounded">
+          New
         </button>
-        <button className="text-sm md:text-lg px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded">
+        <button className="text-xs md:text-base px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded">
           Sort
         </button>
       </div>
@@ -72,7 +72,7 @@ const Todos = () => {
 
               <hr className="border-indigo-600/50 mt-4" />
 
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-evenly">
                 <div className="pb-2 m-5">
                   <button
                     className={`${'text-xs bg-blue-400 font-semibold py-2 px-3 rounded'} ${completed ? 'bg-blue-500' : 'bg-red-400'}`}
@@ -82,6 +82,7 @@ const Todos = () => {
                     {!completed && "incomplete"}
                   </button>
                 </div>
+
                 <div className="flex flex-row justify-end gap-3 pb-2 m-5">
                   <button className="text-xs md:text-sm bg-yellow-600 font-semibold py-2 px-3 hover:bg-yellow-500 rounded">
                     {/* View */}
